@@ -25,11 +25,9 @@ def add(point1, point2, p, a):
 
     if x1 == x2:
         # This is the case point1 == point2.
-        # m = (3 * x1 * x1 + a) * inverse_mod(2 * y1, p)
         m = (3 * x1 * x1 + a) * inverse_mod(2 * y1, p)
     else:
         # This is the case point1 != point2.
-        # m = (y1 - y2) * inverse_mod(x1 - x2, p)
         m = (y1 - y2) * inverse_mod((x1 - x2), p)
 
     x3 = m * m - x1 - x2
@@ -60,7 +58,7 @@ p = 5
 # Curve coefficient:
 a = 2
 # Curve coefficient:
-b = (-1)  #
+b = (-1)
 # generatorPoint:
 gp = (0, 3)
 # skalar factor:
